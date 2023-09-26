@@ -1,5 +1,4 @@
 const { Client } = require('pg');
-const { debug } = require('util');
 
 const db = new Client({
   user: process.env.DB_USER,
@@ -7,8 +6,11 @@ const db = new Client({
   database: process.env.DB_NAME,
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
-})
+});
 
-db.connect();
+db.connect()
+  .then(() => console.log(`Connected to ${process.env.DB_NAME} database`))
+  .catch(err => console.log('ERROR:', err.stack));
 
-module.exports = db;
+
+module.exports = db  
