@@ -3,8 +3,9 @@ LightHouse labs Lecture notes Web flex week 12
 
 
 ## Topics
-- [x] Reading/writing data using SQL
-- [x] async execution of queries (pg library)
+- [ ] Reading/writing data using SQL (review)
+- [ ] async execution of queries (pg library)
+- [ ] app architecture/structure (layers)
 - [ ] sql injection and how to sanitize our inputs
 
 ## SQL Syntax Review
